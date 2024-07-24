@@ -1,0 +1,15 @@
+<div>
+    <div><a id="button-products" class="button" href="/products">Volver</a></div>
+    <h1>Products added to cart:</h1>
+    <div >
+        {{#each products}}
+            <div>
+                <h3>{{this.product.title}}</h3>
+                <hr>
+                <p>Categoria: {{this.product.category}}</p>
+                <p>Precio: $ {{this.product.price}}</p>
+                <p>Cantidad: {{this.quantity}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>

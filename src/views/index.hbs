@@ -1,0 +1,25 @@
+<div >
+    <div><a id="button-cart" class="button">Ver Carrito</a></div>
+    <h1>Products</h1>
+    <div>
+        {{#each products}}
+            <div>
+                <h3>{{this.title}}</h3>
+                <p>Description: {{this.description}}</p>
+                <p>Category: {{this.category}}</p>
+                <p>Price: $ {{this.price}}</p>
+                <button id="button-create" onclick="addToCart('{{this._id}}')">Add to cart</button>
+            </div>
+        {{/each}}
+    </div>
+    <div>
+        {{#if prevLink.exist}}
+            <a id="button-paginate" class="button" href="{{prevLink.link}}">Previous page</a>
+        {{/if}}
+        {{#if nextLink.exist}}
+            <a id="button-paginate" class="button" href="{{nextLink.link}}">Next page</a>
+        {{/if}}
+    </div>
+</div>
+
+<script src="/js/index.js" ></script>
